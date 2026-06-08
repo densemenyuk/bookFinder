@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const api = `https://www.googleapis.com/books/v1/volumes?q=harry+potter&key=${API_KEY}`;
+const api = `https://www.googleapis.com/books/v1/volumes?q=agatha+christie&key=${API_KEY}`;
 
 function RequestBooks() {
  const [books, setBooks] = useState([]);
