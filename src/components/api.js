@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const api = "https://www.googleapis.com/books/v1/volumes?q=search+terms";
+const API_KEY = "AIzaSyDbnxFOx0ZPqzDdebPVJdssQE4mEeED160"
+const api = `https://www.googleapis.com/books/v1/volumes?q=harry+potter&key=${API_KEY}`;
 
 function RequestBooks() {
   useEffect(() => {
@@ -13,3 +14,5 @@ function RequestBooks() {
 }
 
 export default RequestBooks;
+
+
