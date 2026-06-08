@@ -1,11 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import RequestBooks from "./components/api";
+import RequestBooks from "./components/books-page";
+import SearchPage from "./components/search";
 
 function App() {
   return (
-    <div>
-      <RequestBooks />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<SearchPage />} />
+        <Route path="/books-page" element={<RequestBooks />} />
+      </Routes>
+    </Router>
   );
 }
 
