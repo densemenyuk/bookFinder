@@ -1,8 +1,8 @@
 {
-  "homepage": "https://densemenyuk.github.io/bookFinder/",
   "name": "book-finder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://densemenyuk.github.io/bookFinder",git a
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
