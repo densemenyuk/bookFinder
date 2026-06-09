@@ -1,4 +1,5 @@
 {
+  "homepage": "https://densemenyuk.github.io/bookFinder/",
   "name": "book-finder",
   "version": "0.1.0",
   "private": true,
@@ -11,8 +12,7 @@
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.17.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "homepage": "https://densemenyuk.github.io/bookFinder/"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
