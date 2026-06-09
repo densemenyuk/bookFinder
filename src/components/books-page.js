@@ -17,26 +17,26 @@ function RequestBooks() {
     fetch(api)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setBooks(data.items || []);
       });
   }, []);
 
   return (
-    <div>
-      <h1>Books</h1>
-      <ul>
+    <div className="flex-container">
+      <h1 className="title">Books</h1>
+      <ul className="flex-list">
         {books.map((book) => (
-          <li key={book.id}>
-            <h2>{book.volumeInfo.title}</h2>
+          <li key={book.id} className="flex-item">
+            <h2 className="card-header">{book.volumeInfo.title}</h2>
             <p>Автор: {book.volumeInfo.authors}</p>
             {book.volumeInfo.imageLinks?.thumbnail && (
               <img
+                className="bookimg"
                 src={book.volumeInfo.imageLinks.thumbnail}
                 alt="book title"
               />
             )}
-            <p>{book.volumeInfo.description}</p>
+            {/* <p>{book.volumeInfo.description}</p> */}
           </li>
         ))}
       </ul>

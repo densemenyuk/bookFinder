@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../../src/style/search.css";
 
 function SearchPage() {
   const [query, setQuery] = useState("");
@@ -13,16 +14,19 @@ function SearchPage() {
   };
 
   return (
-    <div>
-      <h1>Поиск книг</h1>
-      <form onSubmit={handleSumbit}>
+    <div className="bgimg">
+      <h1 className="title">Book Finder</h1>
+      <form onSubmit={handleSumbit} className="form">
         <input
+          className="searchinput"
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Введите название книги"
+          placeholder="Введине название книги"
         />
-        <button type="submit">Найти</button>
+        <button className="searchbtn" type="submit">
+          Найти
+        </button>
       </form>
     </div>
   );
