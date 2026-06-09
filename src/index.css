@@ -65,7 +65,7 @@ code {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-bottom: 30px;
+  background-color: rgb(170, 235, 235)пше 
 }
 .out {
   display: none;
