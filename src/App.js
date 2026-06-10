@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<SearchPage />} />
-        <Route path="/books-page" element={<RequestBooks />} />
       </Routes>
     </div>
   );

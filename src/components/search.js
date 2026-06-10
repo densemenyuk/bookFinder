@@ -1,34 +1,32 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../../src/style/search.css";
+import BooksList from "./books-page";
 
 function SearchPage() {
   const [query, setQuery] = useState("");
-  const navigate = useNavigate();
+  const [search, setSearch] = useState(""); 
 
-  const handleSumbit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (query.trim()) {
-      navigate(`/books-page?q=${encodeURIComponent(query)}`);
-    }
+    setSearch(query);
   };
 
   return (
+    <>
     <div className="bgimg">
       <h1 className="title">Book Finder</h1>
-      <form onSubmit={handleSumbit} className="form">
+      <form onSubmit={handleSubmit} className="search-form">
         <input
           className="searchinput"
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Введине название книги"
+          onChange={e => setQuery(e.target.value)}
+          placeholder="Введите название книги"
         />
-        <button className="searchbtn" type="submit">
-          Найти
-        </button>
+        <button className="searchbtn" type="submit">Найти</button>
       </form>
     </div>
+    <BooksList query={search} />
+    </>
   );
 }
 
